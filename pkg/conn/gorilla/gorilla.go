@@ -8,6 +8,7 @@ import (
 	"net"
 	"reflect"
 	"strconv"
+	"strings"
 	"sync"
 	"time"
 
@@ -263,10 +264,16 @@ func (ws *WebSocket) initialize() {
 }
 
 func (ws *WebSocket) handleError(err error) bool {
+	fmt.Printf("%+v\n", err)
 	if errors.Is(err, net.ErrClosed) {
 		ws.closeError = net.ErrClosed
 		return true
 	}
+	if strings.Contains(err.Error(), "Eine vorhandene Verbindung wurde vom Remotehost geschlossen") {
+		ws.closeError = err
+		return true
+	}
+
 	if gorilla.IsUnexpectedCloseError(err) {
 		ws.closeError = io.ErrClosedPipe
 		<-ws.closeChan
