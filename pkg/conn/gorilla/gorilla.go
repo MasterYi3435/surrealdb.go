@@ -11,13 +11,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/surrealdb/surrealdb.go/pkg/model"
+	"github.com/MasterYi3435/surrealdb.go/pkg/model"
 
+	"github.com/MasterYi3435/surrealdb.go/internal/rpc"
+	"github.com/MasterYi3435/surrealdb.go/pkg/conn"
+	"github.com/MasterYi3435/surrealdb.go/pkg/logger"
+	"github.com/MasterYi3435/surrealdb.go/pkg/rand"
 	gorilla "github.com/gorilla/websocket"
-	"github.com/surrealdb/surrealdb.go/internal/rpc"
-	"github.com/surrealdb/surrealdb.go/pkg/conn"
-	"github.com/surrealdb/surrealdb.go/pkg/logger"
-	"github.com/surrealdb/surrealdb.go/pkg/rand"
 )
 
 const (

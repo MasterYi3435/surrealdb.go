@@ -11,19 +11,19 @@ import (
 	"testing"
 	"time"
 
+	"github.com/MasterYi3435/surrealdb.go/pkg/logger/slog"
+	"github.com/MasterYi3435/surrealdb.go/pkg/model"
 	"github.com/stretchr/testify/assert"
-	"github.com/surrealdb/surrealdb.go/pkg/logger/slog"
-	"github.com/surrealdb/surrealdb.go/pkg/model"
 
+	"github.com/MasterYi3435/surrealdb.go"
+	"github.com/MasterYi3435/surrealdb.go/pkg/conn/gorilla"
+	"github.com/MasterYi3435/surrealdb.go/pkg/constants"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/surrealdb/surrealdb.go"
-	"github.com/surrealdb/surrealdb.go/pkg/conn/gorilla"
-	"github.com/surrealdb/surrealdb.go/pkg/constants"
 
-	"github.com/surrealdb/surrealdb.go/pkg/conn"
-	"github.com/surrealdb/surrealdb.go/pkg/logger"
-	"github.com/surrealdb/surrealdb.go/pkg/marshal"
+	"github.com/MasterYi3435/surrealdb.go/pkg/conn"
+	"github.com/MasterYi3435/surrealdb.go/pkg/logger"
+	"github.com/MasterYi3435/surrealdb.go/pkg/marshal"
 )
 
 // Default consts and vars for testing

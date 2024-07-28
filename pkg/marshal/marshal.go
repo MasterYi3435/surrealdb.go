@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/surrealdb/surrealdb.go/pkg/constants"
-	"github.com/surrealdb/surrealdb.go/pkg/util"
+	"github.com/MasterYi3435/surrealdb.go/pkg/constants"
+	"github.com/MasterYi3435/surrealdb.go/pkg/util"
 )
 
 const StatusOK = "OK"
