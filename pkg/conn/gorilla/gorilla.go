@@ -264,7 +264,9 @@ func (ws *WebSocket) initialize() {
 }
 
 func (ws *WebSocket) handleError(err error) bool {
-	fmt.Printf("%+v\n", err)
+	if err == nil {
+		return false
+	}
 	if errors.Is(err, net.ErrClosed) {
 		ws.closeError = net.ErrClosed
 		return true
